@@ -581,6 +581,9 @@ h1:hover {
         font-size: 25px;
         line-height: 60px;
     }
+    .slills ul {
+        padding : 5px;
+    }
 
     h1 {
         margin: 20px;
