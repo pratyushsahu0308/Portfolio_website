@@ -39,13 +39,14 @@
                     </div>
                 </h2>
                 <ul>
-                    <li><i id="menu-icon" class="fa-solid fa-bars" style="color: #ffffff;"></i></li>
+                    <li><i id="menu-icon" class="fa-solid fa-bars"></i></li>
                     <div class="navbar">
                         <li><a href="#header">Home</a></li>
                         <li><a href="#text">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#footer">Contact</a></li>
-                        <li><a href="https://www.linkedin.com/in/pratyushsahu0308" class="btn">LinkedIn</a>
+                        <li><a href="https://www.linkedin.com/in/pratyushsahu0308" id="linkedin"
+                                class="btn">LinkedIn</a>
                         </li>
                     </div>
                 </ul>
@@ -86,32 +87,53 @@
         </div>
     </section>
     <section id="skills" class="skills">
-        <h1>Skills</h1>
-        <ul>
-            <li>
-                <a><i class="fa devicon-html5-plain"></i><span>HTML</span></a>
-            </li>
-            <li>
-                <a><i class="fa devicon-css3-plain"></i><span>CSS</span></a>
-            </li>
+        <div class="ski">
+            <h1>Skills</h1>
+        </div>
+        <div class="shadow">
+            <ul>
+                <li>
+                    <a><i class="fa devicon-html5-plain"></i><span>HTML</span></a>
+                </li>
+                <li>
+                    <a><i class="fa devicon-css3-plain"></i><span>CSS</span></a>
+                </li>
 
-            <li>
-                <a><i class="fa devicon-java-plain"></i><span>Java</span></a>
-            </li>
-            <li>
-                <a><i class="fa devicon-javascript-plain"></i><span>JavaScript</span></a>
-            </li>
+                <li>
+                    <a><i class="fa devicon-java-plain"></i><span>Java</span></a>
+                </li>
+                <li>
+                    <a><i class="fa devicon-javascript-plain"></i><span>JavaScript</span></a>
+                </li>
 
 
-            <li>
-                <a><i class="fa devicon-c-plain"></i><span>C</span></a>
-            </li>
-            <li>
-                <a><i class="fa devicon-cplusplus-plain"></i><span>C++</span></a>
-            </li>
+                <li>
+                    <a><i class="fa devicon-c-plain"></i><span>C</span></a>
+                </li>
+                <li>
+                    <a><i class="fa devicon-cplusplus-plain"></i><span>C++</span></a>
+                </li>
 
-        </ul>
+            </ul>
+        </div>
+        <div class="contact">
+            <div class="container">
+                <h1 class="sub-title">Contact Me</h1>
+                <div class="row">
 
+
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                        </form>
+                        <button type="submit" class="btn">Submit</button>
+                        <a href="pratyush_resume.pdf" class="btn">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer id="footer">
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-twitter"></i>
@@ -122,6 +144,7 @@
 
         </footer>
     </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
 </body>
 
