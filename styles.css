@@ -22,6 +22,7 @@ nav {
     padding-top: 20px;
     padding-left: 10%;
     padding-right: 10%;
+    padding-bottom: 30px;
 }
 
 
@@ -39,7 +40,7 @@ nav {
 
 .logo.up {
     position: relative;
-    bottom: 87px;
+    bottom: 44px;
 }
 
 .box {
@@ -104,6 +105,10 @@ nav ul li a {
 nav ul li a:hover {
     color: #ea1538;
     transition: 0.3s;
+}
+
+.btn:hover {
+    color: #fff;
 }
 
 #menu-icon {
@@ -470,6 +475,10 @@ h1:hover {
         margin-left: 20%;
     }
 
+    .logo.up {
+        bottom: 87px;
+    }
+
     .navbar {
         display: none;
     }
@@ -493,6 +502,10 @@ h1:hover {
 }
 
 @media (max-width: 700px) {
+    .logo {
+        font-size: 24px;
+    }
+
     .navbar {
         display: none;
     }
@@ -515,5 +528,62 @@ h1:hover {
 
     #menu-icon {
         display: block;
+        font-size: 24px;
+    }
+
+    .box .eye {
+        width: 28px;
+        height: 28px;
+    }
+
+    .box .eye::before {
+        left: 7px;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        width: 10px;
+        height: 10px;
+        border: 2px solid #2196f3;
+    }
+
+    .intro h1 {
+        margin: 7px 0px 7px;
+        font-size: 37px;
+        text-align: left;
+    }
+
+    .intro h3 {
+        font-size: 20px;
+        margin-bottom: 66px;
+    }
+
+    .intro h4 {
+        font-size: 14px;
+    }
+
+    .intro {
+        padding-left: 10%;
+        padding-top: 10%;
+    }
+
+    .newsletter form {
+        width: 255px;
+        bottom: 35px;
+    }
+
+    .square {
+
+        width: 300px;
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    .skills ul li a .fa {
+        font-size: 25px;
+        line-height: 60px;
+    }
+
+    h1 {
+        margin: 20px;
+        font-size: 42px;
     }
 }
