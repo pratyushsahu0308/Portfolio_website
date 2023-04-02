@@ -24,9 +24,55 @@ nav {
     padding-right: 10%;
 }
 
+
+.navbar.active {
+    display: block;
+}
+
 .logo {
     color: white;
-    font-size: 28px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo.up {
+    position: relative;
+    bottom: 87px;
+}
+
+.box {
+    display: flex;
+}
+
+.box .eye {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2),
+        inset 0 0 5px #ea1538,
+        inset 0 0 8px #ea1538;
+}
+
+.box .eye::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    background: #000;
+    border-radius: 50%;
+    border: 3px solid #2196f3;
+    box-sizing: border-box;
+
 }
 
 nav span {
@@ -35,6 +81,11 @@ nav span {
 
 .intro span {
     color: #ea1538;
+}
+
+nav ul {
+    position: relative;
+    bottom: 10px;
 }
 
 nav ul li {
@@ -47,6 +98,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    margin-left: 20px;
 }
 
 nav ul li a:hover {
@@ -54,28 +106,17 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-.btn {
-    border: none;
-    background: #ea1538;
-    padding: 12px 30px;
-    border-radius: 30px;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    transform: 1.5s;
-    text-decoration: none;
-}
-
-.btn:hover {
-    transform: scale(1.1);
+#menu-icon {
+    display: none;
+    font-size: 26px;
     cursor: pointer;
+    text-align: center;
 }
 
-.div-box div {
-    margin-left: 3rem;
-    margin-right: 3rem;
-    margin-bottom: 4rem;
 
+
+.intro {
+    padding-left: 30%;
 }
 
 .intro h1 {
@@ -128,31 +169,23 @@ nav ul li a:hover {
 }
 
 .skills {
-    margin: 0;
+
     padding: 0;
     height: 85vh;
 }
 
+
 .skills ul {
-    position: relative;
-    top: 5rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
-    display: flex;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
 }
 
 .skills ul li {
     list-style: none;
-    margin: 20px 40px;
-    float: left;
-    width: 33.33%;
-    padding: 2rem;
-    padding-top: 3rem;
-    padding-left: 20%;
-    float: left;
-    width: 50%;
+    margin: 40px auto;
+
 }
 
 .skills ul li a .fa {
@@ -164,7 +197,6 @@ nav ul li a:hover {
 }
 
 .skills ul li a {
-    position: relative;
     display: block;
     width: 150px;
     height: 75px;
@@ -252,7 +284,11 @@ h1 {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
 }
 
 .square {
@@ -327,7 +363,6 @@ h1 {
     line-height: 2.5rem;
     margin: 3rem;
     padding-top: 2rem;
-    padding-bottom: 5rem;
     color: black;
     font-family: 'DM Sans';
     font-style: normal;
@@ -394,6 +429,7 @@ h1:hover {
     text-align: center;
     background-color: black;
     color: white;
+    margin-top: 5rem;
 }
 
 #footer i {
@@ -402,4 +438,82 @@ h1:hover {
 
 #footer p {
     color: #ccc;
+}
+
+@media (min-width:961px) {
+    .btn {
+        border: none;
+        background: #ea1538;
+        padding: 12px 30px;
+        border-radius: 30px;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        transform: 1.5s;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width: 960px) {
+    .div-box {
+        grid-template-columns: 1fr;
+        padding-bottom: 3rem;
+    }
+
+    .square {
+        margin-left: 20%;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+
+    #menu-icon {
+        display: block;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul {
+        bottom: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        display: none;
+    }
+
+    .div-box {
+        grid-template-columns: 1fr;
+        padding-bottom: 3rem;
+    }
+
+    .skills ul {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .intro,
+    .square {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #menu-icon {
+        display: block;
+    }
 }
