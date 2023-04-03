@@ -50,3 +50,18 @@ var play = (function () {
         }
     };
 })();
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw3mEcB3amyigifDL2QMwuWpc8ZmjovUeQ2JNbSDh6vZq3YiOnKW7-pswPMfdIyPnpPLQ/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Your message has been received."
+            setTimeout(function () {
+                msg.innerHTML = ""
+            }, 7000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+})
