@@ -33,7 +33,7 @@
     <header id="header">
         <div class="hero">
             <nav>
-                <h2 id="logo up" class="logo">Portf
+                <h2 id="logo" class="logo">Portf
                     <div class="box">
                         <div class="eye"></div>
                         <span>li</span>
@@ -47,6 +47,7 @@
                         <li><a href="#text">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#footer">Contact</a></li>
+                        <li><a id="cv2" href="pratyush_resume.pdf">Resume</a></li>
                         <li><a href="https://www.linkedin.com/in/pratyushsahu0308" id="linkedin"
                                 class="btn">LinkedIn</a>
                         </li>
@@ -56,7 +57,7 @@
             </nav>
         </div>
     </header>
-
+    <a id="cv" href="pratyush_resume.pdf" class="btn">Download CV</a>
     <div class="iron" id="iron"><img src="iron-man.png"></div>
 
     <section class="div-box">
@@ -129,22 +130,24 @@
 
 
                     <div class="contact-right">
-                        <form>
+                        <form name="submit-to-google-sheet">
                             <input type="text" name="name" placeholder="Your Name" required>
                             <input type="email" name="email" placeholder="Your Email" required>
                             <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                            <button id="submit" type="submit" class="btn">Submit</button>
+                            <span id="msg"></span>
                         </form>
-                        <button type="submit" class="btn">Submit</button>
-                        <a href="pratyush_resume.pdf" class="btn">Download CV</a>
                     </div>
                 </div>
             </div>
         </div>
         <footer id="footer">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-solid fa-envelope"></i>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
 
             <p>© Copyright Pratyush</p>
 
