@@ -584,7 +584,14 @@ h1:hover {
 #cv2 {
     display: none;
 }
+#submit:hover {
+    color: white;
+}
 
+
+#cv:hover {
+    color: white;
+}
 @keyframes slideMe {
     0% {
         transform: translateY(200rem);
