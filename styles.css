@@ -126,6 +126,7 @@ nav span {
     color: #ea1538;
 }
 
+
 .intro span {
     color: #ea1538;
 }
@@ -529,6 +530,26 @@ h1:hover {
     color: #ccc;
 }
 
+.iron {
+    position: absolute;
+    left: 30%;
+    z-index: 1;
+    top: -150%;
+
+}
+
+.iron-man {
+    animation: slideMe 5s ease-in;
+}
+
+@keyframes slideMe {
+    0% {
+        transform: translateY(200rem);
+    }
+
+    100% {}
+}
+
 @media (min-width:961px) {
     .btn {
         border: none;
@@ -554,6 +575,10 @@ h1:hover {
     .div-box {
         grid-template-columns: 1fr;
         padding-bottom: 3rem;
+    }
+
+    .iron {
+        left: 1rem;
     }
 
     .square {
@@ -630,6 +655,7 @@ h1:hover {
         display: block;
         font-size: 24px;
     }
+
 
     .box .eye {
         width: 28px;
