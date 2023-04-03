@@ -33,5 +33,20 @@ const sr = ScrollReveal({
 sr.reveal('.intro', { delay: 350, origin: 'left' });
 sr.reveal('.square', { delay: 350, origin: 'right' });
 sr.reveal('.ski,.shadow', { delay: 350, origin: 'bottom' });
+// sr.reveal('.iron', { delay: 1000, origin: 'bottom', distance: '5rem', reset: false });
 sr.reveal('.contact', { delay: 200, origin: 'bottom' });
 sr.reveal('#footer', { delay: 200, origin: 'bottom' });
+function playSound() {
+    let audio = new Audio("iron-man.mp3");
+    audio.play();
+    document.getElementById("iron").classList.add("iron-man");
+}
+var executed = false;
+var play = (function () {
+    return function () {
+        if (!executed) {
+            executed = true;
+            playSound();
+        }
+    };
+})();
