@@ -164,7 +164,6 @@ nav ul li a:hover {
 }
 
 
-
 .intro {
     padding-left: 30%;
 }
@@ -581,9 +580,6 @@ h1:hover {
     right: 3rem;
 }
 
-#cv2 {
-    display: none;
-}
 #submit:hover {
     color: white;
 }
@@ -592,6 +588,11 @@ h1:hover {
 #cv:hover {
     color: white;
 }
+
+#cv2 {
+    display: none;
+}
+
 @keyframes slideMe {
     0% {
         transform: translateY(200rem);
