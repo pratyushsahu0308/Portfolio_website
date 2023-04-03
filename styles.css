@@ -40,10 +40,6 @@ nav {
     align-items: center;
 }
 
-.logo.up {
-    position: relative;
-    bottom: 44px;
-}
 
 .box {
     display: flex;
@@ -83,7 +79,7 @@ nav {
     grid-template-columns: 1fr;
 }
 
-.contact-right {
+form {
     text-align: center;
 }
 
@@ -100,12 +96,14 @@ nav {
 
 .contact-right form {
     width: 100%;
+    text-align: center;
 }
 
 .contact-right .btn {
     padding: 1rem;
     margin: 1rem;
 }
+
 
 .contact-right form input,
 form textarea {
@@ -298,7 +296,7 @@ nav ul li a:hover {
 
 .skills ul li a:hover {
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-    box-shadow: -50px 20px 10px rgba(207, 196, 196, 0.5);
+    box-shadow: -50px 20px 10px rgba(0, 0, 0, 0.288);
 }
 
 .skills ul li:hover .fa {
@@ -327,6 +325,11 @@ nav ul li a:hover {
     box-sizing: border-box;
     padding: 1.5rem;
     padding-bottom: 3rem;
+
+}
+
+.shadow li {
+    animation: float2 4s ease-in-out infinite;
 }
 
 h1 {
@@ -465,6 +468,20 @@ h1 {
     }
 }
 
+@keyframes float2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(2rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .skills h1 {
 
     line-height: 2.5rem;
@@ -540,11 +557,37 @@ h1:hover {
 
 .iron-man {
     animation: slideMe 5s ease-in;
+    animation-delay: 1s;
+}
+
+#msg {
+    color: #ea1538;
+    font-size: 2rem;
+    margin-top: 2rem;
+    display: block;
+}
+
+
+#submit {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
+
+#cv {
+    z-index: 1;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+#cv2 {
+    display: none;
 }
 
 @keyframes slideMe {
     0% {
-        transform: translateY(250rem);
+        transform: translateY(200rem);
     }
 
     100% {}
@@ -586,7 +629,8 @@ h1:hover {
     }
 
     .logo.up {
-        bottom: 87px;
+        position: relative;
+        bottom: 113px;
     }
 
     .navbar {
@@ -624,6 +668,15 @@ h1:hover {
     nav ul {
         bottom: 0;
     }
+
+
+    #cv {
+        display: none;
+    }
+
+    #cv2 {
+        display: inline;
+    }
 }
 
 @media (max-width: 700px) {
@@ -643,6 +696,10 @@ h1:hover {
     .skills ul {
         grid-template-columns: repeat(1, 1fr);
 
+    }
+
+    .skills ul li {
+        margin-bottom: 2rem;
     }
 
     .intro,
@@ -712,4 +769,5 @@ h1:hover {
         margin: 20px;
         font-size: 42px;
     }
+
 }
