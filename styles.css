@@ -124,9 +124,11 @@ form textarea {
 nav span {
     color: #ea1538;
 }
+
 .intro {
     text-align: left;
 }
+
 .intro span {
     color: #ea1538;
 }
@@ -602,6 +604,14 @@ h1:hover {
     100% {}
 }
 
+@keyframes slideMe2 {
+    0% {
+        transform: translateX(10rem);
+    }
+
+    100% {}
+}
+
 @media (min-width:961px) {
     .btn {
         border: none;
@@ -628,14 +638,24 @@ h1:hover {
         grid-template-columns: 1fr;
         padding-bottom: 3rem;
     }
-    
+
     .square {
         margin-left: 20%;
     }
 
     .logo.up {
         position: relative;
-        bottom: 113px;
+        bottom: 116px;
+    }
+
+    .intro.up {
+        transform: translateX(-4.5rem) scale(0.7);
+    }
+
+    .intro1.up {
+        position: relative;
+        bottom: 234px;
+        z-index: -1;
     }
 
     .navbar {
@@ -646,10 +666,14 @@ h1:hover {
     #menu-icon {
         display: block;
         color: #ea1538;
+        position: relative;
+        right: 1rem;
     }
+
     .skills span {
-    bottom: 0rem;
-}
+        bottom: 0rem;
+    }
+
     .btn {
         border: none;
         background: #ea1538;
@@ -670,6 +694,12 @@ h1:hover {
 
     nav ul li {
         display: block;
+
+    }
+
+    .fa-thin {
+        position: relative;
+        left: 2rem;
     }
 
     nav ul {
