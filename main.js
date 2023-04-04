@@ -1,4 +1,5 @@
 let text = document.getElementById("text");
+let intro1 = document.getElementById("intro1");
 let square = document.getElementById("square");
 let menuIcon = document.querySelector('#menu-icon');
 let navBar = document.querySelector('.navbar');
@@ -9,10 +10,14 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('fa-caret-down');
     navBar.classList.toggle('active');
     logo.classList.toggle('up');
+    intro1.classList.toggle('up');
+    text.classList.toggle('up');
+    text.style.transition = "all .5s";
 }
 window.addEventListener("scroll", function () {
     let value = this.window.scrollY;
-    text.style.marginLeft = -(value * 2) + "px";
+    text.style.marginLeft = -(value * 1.5) + "px";
+    text.style.marginTop = -(value * 2) + "px";
 })
 document.querySelector('body').addEventListener('mousemove', eyeball);
 function eyeball() {
@@ -34,20 +39,7 @@ sr.reveal('.intro', { delay: 350, origin: 'left' });
 sr.reveal('.square', { delay: 350, origin: 'right' });
 sr.reveal('.ski,.shadow', { delay: 350, origin: 'bottom' });
 sr.reveal('.contact', { delay: 200, origin: 'bottom' });
-function playSound() {
-    let audio = new Audio("iron-man.mp3");
-    audio.play();
-    document.getElementById("iron").classList.add("iron-man");
-}
-var executed = false;
-var play = (function () {
-    return function () {
-        if (!executed) {
-            executed = true;
-            playSound();
-        }
-    };
-})();
+
 const scriptURL = 'https://script.google.com/macros/s/AKfycbw3mEcB3amyigifDL2QMwuWpc8ZmjovUeQ2JNbSDh6vZq3YiOnKW7-pswPMfdIyPnpPLQ/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
