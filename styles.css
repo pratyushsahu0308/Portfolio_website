@@ -627,11 +627,7 @@ h1:hover {
         grid-template-columns: 1fr;
         padding-bottom: 3rem;
     }
-
-    .iron {
-        left: 1rem;
-    }
-
+    
     .square {
         margin-left: 20%;
     }
