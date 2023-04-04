@@ -647,7 +647,9 @@ h1:hover {
         display: block;
         color: #ea1538;
     }
-
+    .skills span {
+    bottom: 0rem;
+}
     .btn {
         border: none;
         background: #ea1538;
