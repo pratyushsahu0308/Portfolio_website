@@ -28,6 +28,23 @@
         rel="stylesheet">
 
 </head>
+<script>
+    function playSound() {
+        let audio = new Audio("iron-man.mp3");
+        audio.play();
+        document.getElementById("iron").classList.add("iron-man");
+    }
+    var play = (function () {
+        var executed = false;
+        return function () {
+            if (!executed) {
+                executed = true;
+                playSound()
+            }
+        };
+    })();
+
+</script>
 
 <body onclick="play()">
 
@@ -60,102 +77,103 @@
     </header>
     <a id="cv" href="pratyush_resume.pdf" class="btn">Download CV</a>
     <div class="iron" id="iron"><img src="iron-man.png"></div>
-
-    <section class="div-box">
-        <div id="text" class="intro">
-            <h4>Hello, my name is </h4>
-            <h1>Pratyush <span>Sahu</span></h1>
-            <h3>I'am a Web Developer.</h3>
-            <div class="newsletter">
-                <form>
-                    <input type="email" name="email" id="mail" placeholder="Enter Your E-mail">
-                    <input type="submit" name="submit" value="Let's start">
-                </form>
+    <div id="intro1" class="intro1">
+        <section class="div-box">
+            <div id="text" class="intro">
+                <h4>Hello, my name is </h4>
+                <h1>Pratyush <span>Sahu</span></h1>
+                <h3>I'am a Web Developer.</h3>
+                <div class="newsletter">
+                    <form>
+                        <input type="email" name="email" id="mail" placeholder="Enter Your E-mail">
+                        <input type="submit" name="submit" value="Let's start">
+                    </form>
+                </div>
             </div>
-        </div>
 
-        <div id="square" class="square">
-            <span>
+            <div id="square" class="square">
+                <span>
 
-            </span>
-            <span>
+                </span>
+                <span>
 
-            </span>
-            <span>
+                </span>
+                <span>
 
-            </span>
-            <div class="content">
-                <h2>About me</h2>
-                <p>
-                    A sophomore always keen to learn.
+                </span>
+                <div class="content">
+                    <h2>About me</h2>
+                    <p>
+                        A sophomore always keen to learn.
 
-                </p>
-                <a href="https://github.com/pratyushsahu0308">GitHub</a>
+                    </p>
+                    <a href="https://github.com/pratyushsahu0308">GitHub</a>
+                </div>
             </div>
-        </div>
-    </section>
-    <section id="skills" class="skills">
-        <div class="ski">
-            <h1>Skills</h1>
-        </div>
-        <div class="shadow">
-            <ul>
-                <li>
-                    <a><i class="fa devicon-html5-plain"></i><span>HTML</span></a>
-                </li>
-                <li>
-                    <a><i class="fa devicon-css3-plain"></i><span>CSS</span></a>
-                </li>
+        </section>
+        <section id="skills" class="skills">
+            <div class="ski">
+                <h1>Skills</h1>
+            </div>
+            <div class="shadow">
+                <ul>
+                    <li>
+                        <a><i class="fa devicon-html5-plain"></i><span>HTML</span></a>
+                    </li>
+                    <li>
+                        <a><i class="fa devicon-css3-plain"></i><span>CSS</span></a>
+                    </li>
 
-                <li>
-                    <a><i class="fa devicon-java-plain"></i><span>Java</span></a>
-                </li>
-                <li>
-                    <a><i class="fa devicon-javascript-plain"></i><span>JavaScript</span></a>
-                </li>
-
-
-                <li>
-                    <a><i class="fa devicon-c-plain"></i><span>C</span></a>
-                </li>
-                <li>
-                    <a><i class="fa devicon-cplusplus-plain"></i><span>C++</span></a>
-                </li>
-
-            </ul>
-        </div>
-        <div class="contact">
-            <div class="container">
-                <h1 class="sub-title">Contact Me</h1>
-                <div class="row">
+                    <li>
+                        <a><i class="fa devicon-java-plain"></i><span>Java</span></a>
+                    </li>
+                    <li>
+                        <a><i class="fa devicon-javascript-plain"></i><span>JavaScript</span></a>
+                    </li>
 
 
-                    <div class="contact-right">
-                        <form name="submit-to-google-sheet">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="Your Email" required>
-                            <textarea name="message" rows="6" placeholder="Your message"></textarea>
-                            <button id="submit" type="submit" class="btn">Submit</button>
-                            <span id="msg"></span>
-                        </form>
+                    <li>
+                        <a><i class="fa devicon-c-plain"></i><span>C</span></a>
+                    </li>
+                    <li>
+                        <a><i class="fa devicon-cplusplus-plain"></i><span>C++</span></a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="contact">
+                <div class="container">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <div class="row">
+
+
+                        <div class="contact-right">
+                            <form name="submit-to-google-sheet">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                                <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                                <button id="submit" type="submit" class="btn">Submit</button>
+                                <span id="msg"></span>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <footer id="footer">
-            <div>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-solid fa-envelope"></i>
-            </div>
+            <footer id="footer">
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
 
-            <p>© Copyright Pratyush</p>
+                <p>© Copyright Pratyush</p>
 
-        </footer>
-    </section>
-    <script src="https://unpkg.com/scrollreveal"></script>
+            </footer>
+        </section>
+    </div>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 
 </html>
