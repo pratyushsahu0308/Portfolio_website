@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu&display=swap"
         rel="stylesheet">
-
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
 <script>
     function playSound() {
@@ -34,12 +34,16 @@
         audio.play();
         document.getElementById("iron").classList.add("iron-man");
     }
+    function vibrate(ms) {
+        navigator.vibrate(ms);
+    }
     var play = (function () {
         var executed = false;
         return function () {
             if (!executed) {
                 executed = true;
-                playSound()
+                playSound();
+                vibrate(5000);
             }
         };
     })();
@@ -82,7 +86,7 @@
             <div id="text" class="intro">
                 <h4>Hello, my name is </h4>
                 <h1>Pratyush <span>Sahu</span></h1>
-                <h3>I'am a Web Developer.</h3>
+                <h3>I'am a <span class="typewriter"></span></h3>
                 <div class="newsletter">
                     <form>
                         <input type="email" name="email" id="mail" placeholder="Enter Your E-mail">
@@ -172,8 +176,18 @@
             </footer>
         </section>
     </div>
+
     <script src="main.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        var typed = new Typed('.typewriter', {
+            strings: ["Web Developer.", "Coder."],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000
+        });
+    </script>
 </body>
 
 </html>
