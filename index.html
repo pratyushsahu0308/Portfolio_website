@@ -43,7 +43,7 @@
             if (!executed) {
                 executed = true;
                 playSound();
-                vibrate(6000);
+                vibrate(5000);
             }
         };
     })();
@@ -51,6 +51,7 @@
 </script>
 
 <body onclick="play()">
+    <div class="" id="preloader"></div>
 
     <header id="header">
         <div class="hero">
@@ -89,7 +90,7 @@
                 <h3>I'am a <span class="typewriter"></span></h3>
                 <div class="newsletter">
                     <form>
-                        <input type="email" name="email" id="mail" placeholder="Enter Your E-mail">
+                        <input type="email" name="e-mail" id="mail" placeholder="Enter Your E-mail">
                         <input type="submit" name="submit" value="Let's start">
                     </form>
                 </div>
@@ -187,6 +188,25 @@
             backSpeed: 100,
             backDelay: 1000
         });
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwRWdG5yxxrG0f3IxfdBnyxkIW5Xt3Fpi67G_cuQhnfo03y_F-7gwj_s0LVm82Xe5i26Q/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Your message has been received."
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 6000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none"
+        })
     </script>
 </body>
 
