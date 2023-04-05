@@ -596,6 +596,14 @@ h1:hover {
     display: none;
 }
 
+#preloader {
+    background: #ea1538 url(loader.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+}
+
 @keyframes slideMe {
     0% {
         transform: translateY(200rem);
