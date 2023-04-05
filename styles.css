@@ -714,6 +714,10 @@ h1:hover {
     #cv2 {
         display: inline;
     }
+
+    .navbar li {
+        animation: slideMe2 0.5s ease-in;
+    }
 }
 
 @media (max-width: 700px) {
