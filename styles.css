@@ -715,6 +715,10 @@ h1:hover {
         left: 3rem;
 
     }
+    #light{
+        bottom: 4rem;
+        left: 3rem;
+    }
 
     .div-box {
         grid-template-columns: 1fr;
