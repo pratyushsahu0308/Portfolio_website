@@ -4,12 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+.dark-theme {
+    --primary-color: black;
+    --secondary-color: white;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: white;
+    background-color: var(--primary-color);
     margin: 0;
     text-align: center;
 }
@@ -34,7 +44,7 @@ nav {
 }
 
 .logo {
-    color: black;
+    color: var(--secondary-color);
     font-size: 35px;
     display: flex;
     justify-content: center;
@@ -145,7 +155,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
     margin-left: 20px;
@@ -157,7 +167,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    color: black;
+    color: var(--secondary-color);
 }
 
 #menu-icon {
@@ -173,14 +183,14 @@ nav ul li a:hover {
 }
 
 .intro h1 {
-    color: black;
+    color: var(--secondary-color);
     margin: 10px 0px 10px;
     font-size: 55px;
     text-align: left;
 }
 
 .intro h3 {
-    color: black;
+    color: var(--secondary-color);
     font-size: 30px;
     margin-bottom: 100px;
 }
@@ -216,7 +226,7 @@ nav ul li a:hover {
     padding: 10px 30px;
     border-radius: 30px;
     background-color: #ea1538;
-    color: white;
+    color: var(--secondary-color);
     box-shadow: 0px 0px 5px #ccc, 0px 0px 15px #858585;
     top: 6px;
     right: 6px;
@@ -352,7 +362,7 @@ h1 {
 }
 
 .div-box {
-    background-color: #fff;
+    background-color: var(--primary-color);
     min-height: 100vh;
     align-items: center;
     justify-content: center;
@@ -370,7 +380,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--primary-color);
 }
 
 .square span:nth-child(1) {
@@ -428,7 +438,7 @@ h1 {
 }
 
 h1 {
-    color: black;
+    color: var(--secondary-color);
 }
 
 
@@ -490,7 +500,7 @@ h1 {
     line-height: 2.5rem;
     margin: 3rem;
     padding-top: 2rem;
-    color: black;
+    color: var(--secondary-color);
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
@@ -501,7 +511,7 @@ h1 {
 .content {
     position: relative;
     padding: 40px 60px;
-    color: black;
+    color: var(--secondary-color);
     text-align: center;
     transition: 0.5s;
     z-index: 1000;
@@ -511,17 +521,17 @@ h1 {
     position: relative;
     display: inline-block;
     margin-top: 10px;
-    border: 2px solid black;
+    border: 2px solid var(--secondary-color);
     padding: 6px 18px;
     text-decoration: none;
-    color: black;
+    color: var(--secondary-color);
     font-weight: 600;
     border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
 
 }
 
 .content a:hover {
-    color: white;
+    color: var(--primary-color);
 }
 
 h1:hover {
@@ -532,8 +542,8 @@ h1:hover {
 #footer {
     padding: 3%;
     text-align: center;
-    background-color: white;
-    color: black;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 #footer i {
@@ -597,12 +607,12 @@ h1:hover {
 
 
 #submit:hover {
-    color: white;
+    color: var(--primary-color);
 }
 
 
 #cv:hover {
-    color: white;
+    color: var(--primary-color);
 }
 
 #cv2 {
@@ -623,9 +633,35 @@ h1:hover {
     transition: 0.5s;
 }
 
+#light {
+    z-index: 1;
+    position: fixed;
+    bottom: 5rem;
+    left: 5rem;
+    animation: float 4s ease-in-out infinite;
+    text-decoration: none;
+    color: #ea1538;
+    cursor: pointer;
+}
+
+.light {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
 .top.active {
     visibility: visible;
     opacity: 1;
+}
+
+.light.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dark {
+    color: #ccc;
 }
 
 @keyframes slideMe {
@@ -719,7 +755,7 @@ h1:hover {
         background: #ea1538;
         padding: 6px 15px;
         border-radius: 4px;
-        color: white;
+        color: var(--primary-color);
         font-weight: bold;
         font-size: 1rem;
         transform: 1.5s;
