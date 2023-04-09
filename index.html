@@ -178,8 +178,8 @@
         </section>
     </div>
 
-    <script src="main.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
     <script>
         var typed = new Typed('.typewriter', {
             strings: ["Web Developer.", "Coder."],
@@ -204,9 +204,15 @@
                 .catch(error => console.error('Error!', error.message))
         })
         var loader = document.getElementById("preloader");
-        window.addEventListener("load", function () {
+        function load() {
             loader.style.display = "none"
-        })
+        }
+
+        window.onload = function () {
+            setInterval(function () {
+                load();
+            }, 2000);
+        };
     </script>
 </body>
 
