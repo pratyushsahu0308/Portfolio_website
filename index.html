@@ -84,6 +84,7 @@
     <div class="top" id="top">
         <a id="top1" href="#header" class="fa-solid fa-arrow-up-long fa-2xl"></a>
     </div>
+    <i id="light" class="light active fa-solid fa-sun fa-2xl"></i>
     <div class="iron" id="iron"><img src="iron-man.png"></div>
     <div id="intro1" class="intro1">
         <section class="div-box">
@@ -216,7 +217,19 @@
                 load();
             }, 2000);
         };
+        var light = document.getElementById("light");
+        light.onclick = function () {
+            light.classList.toggle('fa-sun');
+            light.classList.toggle('fa-moon');
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                light.style.color = "#ccc";
+            }
+            else {
+                light.style.color = "#ea1538";
+            }
 
+        }
     </script>
 </body>
 
