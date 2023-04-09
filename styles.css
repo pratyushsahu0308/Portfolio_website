@@ -7,11 +7,17 @@
 :root {
     --primary-color: white;
     --secondary-color: black;
+    --primary-bg: #f3f3f3;
+    --secondary-bg: #e6e6e6;
+    --secondary-bg2: #b1b1b1;
 }
 
 .dark-theme {
     --primary-color: black;
     --secondary-color: white;
+    --primary-bg: grey;
+    --secondary-bg: grey;
+    --secondary-bg2: grey;
 }
 
 html {
@@ -265,7 +271,7 @@ nav ul li a:hover {
     display: block;
     width: 150px;
     height: 75px;
-    background: #E6E6E6;
+    background: var(--secondary-bg);
     text-align: center;
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
     transition: .5s;
@@ -290,7 +296,7 @@ nav ul li a:hover {
     left: -20px;
     height: 100%;
     width: 20px;
-    background: #b1b1b1;
+    background: var(--secondary-bg2);
     transition: .5s;
     transform: rotate(0deg) skewY(-45deg);
 }
@@ -302,7 +308,7 @@ nav ul li a:hover {
     left: -10px;
     height: 20px;
     width: 100%;
-    background: #b1b1b1;
+    background: var(--secondary-bg2);
     transition: .5s;
     transform: rotate(0deg) skewX(-45deg);
 }
@@ -313,27 +319,27 @@ nav ul li a:hover {
 }
 
 .skills ul li:hover .fa {
-    color: #fff;
+    color: var(--primary-color);
 }
 
 .skills ul li a:hover {
-    background: black;
-    color: #fff;
+    background: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .skills ul li a:hover:after {
-    background-color: black;
+    background-color: var(--secondary-color);
 }
 
 .skills ul li a:hover:before {
-    background-color: black;
+    background-color: var(--secondary-color);
 }
 
 .shadow {
     margin-left: 10%;
     margin-right: 10%;
     border-radius: 7px;
-    box-shadow: 0 0 20px 10px #f3f3f3;
+    box-shadow: 0 0 20px 10px var(--primary-bg);
     overflow: hidden;
     box-sizing: border-box;
     padding: 1.5rem;
