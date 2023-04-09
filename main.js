@@ -48,3 +48,7 @@ window.addEventListener("scroll", function () {
     var top = document.getElementById("top");
     top.classList.toggle("active", window.scrollY > 300)
 })
+window.addEventListener("scroll", function () {
+    var top = document.getElementById("light");
+    top.classList.toggle("active", window.scrollY <= 300)
+})
