@@ -35,8 +35,6 @@ const sr = ScrollReveal({
     duration: 2700,
     reset: true
 })
-sr.reveal('.intro', { delay: 350, origin: 'left' });
 sr.reveal('.square', { delay: 350, origin: 'right' });
 sr.reveal('.ski,.shadow', { delay: 350, origin: 'bottom' });
 sr.reveal('.contact', { delay: 200, origin: 'bottom' });
-
