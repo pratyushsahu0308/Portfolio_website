@@ -584,6 +584,18 @@ h1:hover {
     animation: float 4s ease-in-out infinite;
 }
 
+#top1 {
+    z-index: 1;
+    position: fixed;
+    bottom: 5rem;
+    left: 5rem;
+    animation: float 4s ease-in-out infinite;
+    text-decoration: none;
+    color: #ea1538;
+}
+
+
+
 #submit:hover {
     color: white;
 }
@@ -603,6 +615,17 @@ h1:hover {
     width: 100%;
     position: fixed;
     z-index: 10000;
+}
+
+.top {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.top.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 @keyframes slideMe {
@@ -643,6 +666,14 @@ h1:hover {
 }
 
 @media (max-width: 960px) {
+
+    #top1 {
+
+        bottom: 4rem;
+        left: 3rem;
+
+    }
+
     .div-box {
         grid-template-columns: 1fr;
         padding-bottom: 3rem;
