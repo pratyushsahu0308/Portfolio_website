@@ -581,6 +581,7 @@ h1:hover {
     position: fixed;
     bottom: 3rem;
     right: 3rem;
+    animation: float 4s ease-in-out infinite;
 }
 
 #submit:hover {
