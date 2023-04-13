@@ -639,16 +639,7 @@ h1:hover {
     transition: 0.5s;
 }
 
-#light {
-    z-index: 1;
-    position: fixed;
-    bottom: 5rem;
-    left: 5rem;
-    animation: float 4s ease-in-out infinite;
-    text-decoration: none;
-    color: #8B8000;
-    cursor: pointer;
-}
+
 
 .light {
     visibility: hidden;
@@ -705,6 +696,16 @@ h1:hover {
         opacity: 0.9;
     }
 
+    #light {
+        z-index: 1;
+        position: fixed;
+        bottom: 5rem;
+        left: 5rem;
+        animation: float 4s ease-in-out infinite;
+        text-decoration: none;
+        color: #ea1538;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 960px) {
@@ -714,10 +715,6 @@ h1:hover {
         bottom: 4rem;
         left: 3rem;
 
-    }
-    #light{
-        bottom: 4rem;
-        left: 3rem;
     }
 
     .div-box {
@@ -803,6 +800,17 @@ h1:hover {
 
     .navbar li {
         animation: slideMe2 0.5s ease-in;
+    }
+
+    #light {
+        z-index: 1;
+        position: fixed;
+        bottom: 5rem;
+        right: 5rem;
+        animation: float 4s ease-in-out infinite;
+        text-decoration: none;
+        color: #ea1538;
+        cursor: pointer;
     }
 }
 
