@@ -51,147 +51,139 @@
 </script>
 
 <body onclick="play()">
+    <div class="" id="preloader"></div>
 
-    <div>
-        <div class="" id="preloader">
-        
+    <header id="header">
+        <div class="hero">
+            <nav>
+                <h2 id="logo" class="logo">Portf
+                    <div class="box">
+                        <div class="eye"></div>
+                        <span>li</span>
+                        <div class="eye"></div>
+                    </div>
+                </h2>
+                <ul>
+                    <li><i id="menu-icon" class="fa-solid fa-bars"></i></li>
+                    <div class="navbar">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#text">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a id="cv2" href="pratyush_resume.pdf">Resume</a></li>
+                        <li><a href="https://www.linkedin.com/in/pratyushsahu0308" id="linkedin"
+                                class="btn">LinkedIn</a>
+                        </li>
+                    </div>
+                </ul>
+
+            </nav>
         </div>
-
-        <header id="header">
-
-            <div class="hero">
-                <nav>
-                    <h2 id="logo" class="logo">Portf
-                        <div class="box">
-                            <div class="eye"></div>
-                            <span>li</span>
-                            <div class="eye"></div>
-                        </div>
-                    </h2>
-                    <ul>
-                        <li><i id="menu-icon" class="fa-solid fa-bars"></i></li>
-                        <div class="navbar">
-                            <li><a href="#header">Home</a></li>
-                            <li><a href="#text">About</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#footer">Contact</a></li>
-                            <li><a id="cv2" href="PratyushSahu_resume.pdf">Resume</a></li>
-                            <li><a href="https://www.linkedin.com/in/pratyushsahu0308" id="linkedin"
-                                    class="btn">LinkedIn</a>
-                            </li>
-                        </div>
-                    </ul>
-
-                </nav>
+    </header>
+    <a id="cv" href="pratyush_resume.pdf" class="btn">Download CV</a>
+    <div class="top" id="top">
+        <a id="top1" href="#header" class="fa-solid fa-arrow-up-long fa-2xl"></a>
+    </div>
+    <i id="light" class="light active fa-solid fa-sun fa-2xl"></i>
+    <div class="iron" id="iron"><img src="iron-man.png"></div>
+    <div id="intro1" class="intro1">
+        <section class="div-box">
+            <div id="text" class="intro">
+                <h4>Hello, my name is </h4>
+                <h1>Pratyush <span>Sahu</span></h1>
+                <h3>I'am a <span class="typewriter"></span></h3>
+                <div class="newsletter">
+                    <form>
+                        <input type="email" name="e-mail" id="mail" placeholder="Enter Your E-mail">
+                        <input type="submit" name="submit" value="Let's start">
+                    </form>
+                </div>
             </div>
-        </header>
-        <a id="cv" href="PratyushSahu_resume.pdf" class="btn">Download CV</a>
-        <div class="top" id="top">
-            <a id="top1" href="#header" class="fa-solid fa-arrow-up-long fa-2xl"></a>
-        </div>
-        <i id="light" class="light active fa-solid fa-sun fa-2xl"></i>
-        <div class="iron" id="iron"><img src="iron-man.png"></div>
-        <div>
-            <div class="intro1">
-                <section class="div-box">
-                    <div id="text" class="intro">
-                        <h4>Hello, my name is </h4>
-                        <h1>Pratyush <span>Sahu</span></h1>
-                        <h3>I'am a <span class="typewriter"></span></h3>
-                        <div class="newsletter">
-                            <form>
-                                <input type="email" name="e-mail" id="mail" placeholder="Enter Your E-mail">
-                                <input type="submit" name="submit" value="Let's start">
+
+            <div id="square" class="square">
+                <span>
+
+                </span>
+                <span>
+
+                </span>
+                <span>
+
+                </span>
+                <div class="content">
+                    <h2>About me</h2>
+                    <p>
+                        A sophomore always keen to learn.
+
+                    </p>
+                    <a href="https://github.com/pratyushsahu0308">GitHub</a>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="skills">
+            <div class="ski">
+                <h1>Skills</h1>
+            </div>
+            <div class="shadow">
+                <ul>
+                    <li>
+                        <a><i class="fa devicon-html5-plain"></i><span>HTML</span></a>
+                    </li>
+                    <li>
+                        <a><i class="fa devicon-css3-plain"></i><span>CSS</span></a>
+                    </li>
+
+                    <li>
+                        <a><i class="fa devicon-java-plain"></i><span>Java</span></a>
+                    </li>
+                    <li>
+                        <a><i class="fa devicon-javascript-plain"></i><span>JavaScript</span></a>
+                    </li>
+
+
+                    <li>
+                        <a><i class="fa devicon-c-plain"></i><span>C</span></a>
+                    </li>
+                    <li>
+                        <a><i class="fa devicon-cplusplus-plain"></i><span>C++</span></a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="contact">
+                <div class="container">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <div class="row">
+
+
+                        <div class="contact-right">
+                            <form name="submit-to-google-sheet">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                                <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                                <button id="submit" type="submit" class="btn">Submit</button>
+                                <span id="msg"></span>
                             </form>
                         </div>
                     </div>
-
-                    <div id="square" class="square">
-                        <span>
-
-                        </span>
-                        <span>
-
-                        </span>
-                        <span>
-
-                        </span>
-                        <div class="content">
-                            <h2>About me</h2>
-                            <p>
-                                A sophomore always keen to learn.
-
-                            </p>
-                            <a href="https://github.com/pratyushsahu0308">GitHub</a>
-                        </div>
-                    </div>
-                </section>
-                <section id="skills" class="skills">
-                    <div class="ski">
-                        <h1>Skills</h1>
-                    </div>
-                    <div class="shadow">
-                        <ul>
-                            <li>
-                                <a><i class="fa devicon-html5-plain"></i><span>HTML</span></a>
-                            </li>
-                            <li>
-                                <a><i class="fa devicon-css3-plain"></i><span>CSS</span></a>
-                            </li>
-
-                            <li>
-                                <a><i class="fa devicon-java-plain"></i><span>Java</span></a>
-                            </li>
-                            <li>
-                                <a><i class="fa devicon-javascript-plain"></i><span>JavaScript</span></a>
-                            </li>
-
-
-                            <li>
-                                <a><i class="fa devicon-c-plain"></i><span>C</span></a>
-                            </li>
-                            <li>
-                                <a><i class="fa devicon-cplusplus-plain"></i><span>C++</span></a>
-                            </li>
-
-                        </ul>
-                    </div>
-                    <div class="contact">
-                        <div class="container">
-                            <h1 class="sub-title">Contact Me</h1>
-                            <div class="row">
-
-
-                                <div class="contact-right">
-                                    <form name="submit-to-google-sheet">
-                                        <input type="text" name="name" placeholder="Your Name" required>
-                                        <input type="email" name="email" placeholder="Your Email" required>
-                                        <textarea name="message" rows="6" placeholder="Your message"></textarea>
-                                        <button id="submit" type="submit" class="btn">Submit</button>
-                                        <span id="msg"></span>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <footer id="footer">
-                        <div>
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-
-                        <p>© Copyright Pratyush</p>
-
-                    </footer>
-                </section>
+                </div>
             </div>
-        </div>
+            <footer id="footer">
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <p>© Copyright Pratyush</p>
+
+            </footer>
+        </section>
     </div>
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
-    <script src="particles.js"></script>
     <script>
         var typed = new Typed('.typewriter', {
             strings: ["Web Developer.", "Coder."],
@@ -223,7 +215,7 @@
         window.onload = function () {
             setInterval(function () {
                 load();
-            }, 4000);
+            }, 2000);
         };
         var light = document.getElementById("light");
         light.onclick = function () {
